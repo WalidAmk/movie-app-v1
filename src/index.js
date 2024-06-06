@@ -1,0 +1,61 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import './css/index.css'
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Discover from "./pages/Discover";
+import MoviePage from "./pages/MoviePage";
+
+
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Home/>,
+    },
+    {
+        path: "/search/*",
+        element: <div>
+            Search
+        </div>,
+    },
+    {
+        path: "/trending",
+        element: <Discover
+            api_url={'https://api.themoviedb.org/3/trending/movie/week?api_key=36d14e31c514fb8eebf881f6ec9715e7'}
+            title={'Discover All Movies & Series'}
+        />,
+    },
+    {
+        path: "/movies",
+        element: <Discover
+            api_url={'https://api.themoviedb.org/3/discover/movie?api_key=36d14e31c514fb8eebf881f6ec9715e7'}
+            title={'Discover All Movies'}
+        />,
+    },
+    {
+        path: "/series",
+        element: <Discover
+            api_url={'https://api.themoviedb.org/3/discover/tv?api_key=36d14e31c514fb8eebf881f6ec9715e7'}
+            title={'Discover All Series'}
+        />,
+    },
+    {
+        path: "/get/:id",
+        element: <MoviePage/>,
+    },
+]); 
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <React.StrictMode>
+        <NavBar/>
+        <RouterProvider router={router} />
+        <Footer/>
+    </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals

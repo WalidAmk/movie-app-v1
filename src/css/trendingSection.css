@@ -1,0 +1,52 @@
+
+.trendingSection {
+    width: 100%;
+    padding: 30px 70px;
+    background-color: #00081d;
+}
+
+.trendingSection h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #e50914;
+    padding-bottom: 20px;
+}
+
+.trendingSection .line {
+    height: 3px;
+    background-image: linear-gradient(to right, #e50914, #00081d);
+}
+
+.trendingContainerLoader {
+    position: relative;
+    width: 100%;
+    padding: 50px 0 100px 0;
+}
+
+.loading {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background-image: linear-gradient(to top, rgb(0, 8, 29), transparent);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.loading button {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: white;
+    background-color: #e50914;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+}
+
+.loading button:hover {
+    background-color: #ff0000;
+}
+
+

@@ -1,0 +1,56 @@
+
+:root {
+    --main-color: #00040b;
+    --second-color: #e50914;
+}
+
+
+
+footer {
+    width: 100%;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 70px;
+}
+
+.navbar_logo {
+    height: 60px;
+}
+
+.navbar_logo a img {
+    height: 100%;
+}
+
+.copyright p {
+    color: white;
+    font-size: 1.25rem;
+}
+
+.navbar_sm_logos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.navbar_sm_logos div {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 6px;
+}
+
+.navbar_sm_logos div img {
+    width: 25px;
+    height: 25px;
+    transition: all .3s;
+}
+
+.navbar_sm_logos div img:hover {
+    transform: scale(1.2);
+}
+
